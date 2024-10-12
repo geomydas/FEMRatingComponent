@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!"
+    />
+    <meta name="author" content="geomydas" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Overpass";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/overpass-v16-latin-regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Overpass";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../fonts/overpass-v16-latin-700.woff2") format("woff2");
+      }
+    </style>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body
+    class="font-overpass bg-darkerblue flex min-h-screen flex-col items-center justify-center p-8"
+    >
+    <main class="bg-darkblue rounded-2xl p-6 max-w-sm">
+      <div class="block" id="part1">
+        <img src="../images/icon-star.svg" alt=""  class=" mb-8 rounded-full bg-gray/10 p-4 size-12"/>
+        <h1 class="font-overpass mb-4 text-2xl font-bold text-white">
+          How did we do?
+        </h1>
+        <p class="font-overpass text-gray mb-6 text-base font-normal">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form action="" method="post" id="form">
+          <fieldset class="mb-6 grid grid-cols-5 gap-4">
+            <label
+              class="hover:text-darkerblue has-[:checked]:text-darkerblue bg-gray/10 font-overpass hover:bg-orange text-gray grid aspect-square w-full place-items-center rounded-full text-center font-bold transition has-[:checked]:bg-white"
+              for="item1"
+              >1<input
+                type="radio"
+                id="item1"
+                name="option"
+                class="sr-only"  required /></label
+            ><label
+              class="hover:text-darkerblue has-[:checked]:text-darkerblue bg-gray/10 font-overpass hover:bg-orange text-gray grid aspect-square w-full place-items-center rounded-full text-center font-bold transition has-[:checked]:bg-white"
+              for="item2"
+              >2<input
+                type="radio"
+                id="item2"
+                name="option"
+                class="sr-only" /></label
+            ><label
+              class="hover:text-darkerblue has-[:checked]:text-darkerblue bg-gray/10 font-overpass hover:bg-orange text-gray grid aspect-square w-full place-items-center rounded-full text-center font-bold transition has-[:checked]:bg-white"
+              for="item3"
+              >3<input
+                type="radio"
+                id="item3"
+                name="option"
+                class="sr-only" /></label
+            ><label
+              class="hover:text-darkerblue has-[:checked]:text-darkerblue bg-gray/10 font-overpass hover:bg-orange text-gray grid aspect-square w-full place-items-center rounded-full text-center font-bold transition has-[:checked]:bg-white"
+              for="item4"
+              >4<input
+                type="radio"
+                id="item4"
+                name="option"
+                class="sr-only" /></label
+            ><label
+              class="hover:text-darkerblue has-[:checked]:text-darkerblue bg-gray/10 font-overpass hover:bg-orange text-gray grid aspect-square w-full place-items-center rounded-full text-center font-bold transition has-[:checked]:bg-white"
+              for="item5"
+              >5<input type="radio" id="item5" name="option" class="sr-only"
+            /></label>
+          </fieldset>
+          <button
+            type="submit"
+            class="font-overpass bg-orange text-darkerblue w-full rounded-full p-2 text-center text-base font-bold uppercase tracking-widest transition hover:bg-white"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="hidden" id="part2">
+        <img src="../images/illustration-thank-you.svg" alt="" 
+      class="mx-auto mb-4">
+        <p class="bg-gray/10 text-center text-orange font-overpass font-normal text-base mx-auto rounded-full w-fit px-4 py-2 mb-8">You selected <span id="rating"></span> out of 5</p>
+        <h2 class="text-2xl text-white font-overpass font-bold text-center mb-4">Thank you!</h2>
+        <p class="font-overpass font-normal text-gray text-center text-base">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
